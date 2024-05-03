@@ -1,8 +1,10 @@
+import { Page } from "@/components/page";
+
 const Index = () => {
   return (
-    <div>
-      <h1>Index</h1>
-    </div>
+    <Page>
+      <h1>Inicio</h1>
+    </Page>
   );
 };
 
