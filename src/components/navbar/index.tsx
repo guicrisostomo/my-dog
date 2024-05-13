@@ -11,42 +11,22 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import ImgLogo from "@/assets/logo.png";
 
 export function Navbar() {
   return (
-    <NavigationMenu className="sticky top-0 z-40 max-w-full !justify-between border-b bg-background p-5">
-      <NavigationMenuList className="mx-auto flex max-w-7xl items-center">
-        <NavigationMenuItem className="flex">
-          <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-            Configurações
-          </NavigationMenuLink>
-
-          <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-            Relatórios
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-      </NavigationMenuList>
-
-      <NavigationMenuList className="mx-auto flex max-w-7xl items-center">
-        <NavigationMenuItem className="flex ml-auto">
-          <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-            Cadastrar
-          </NavigationMenuLink>
-
-          <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-            Entrar
-          </NavigationMenuLink>
-
+    <NavigationMenu className="sticky top-0 z-40 max-w-full !justify-between border-b bg-primary p-5">
+      <NavigationMenuList className="mx-auto flex max-w-7xl items-center bg-inherit">
+        <NavigationMenuItem className="flex bg-inherit">
           <NavigationMenuLink
-            className={cn(navigationMenuTriggerStyle(), "gap-2")}
+            className={cn(navigationMenuTriggerStyle(), "bg-inherit text-white")}
           >
-            <Avatar>
-              <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
-              <AvatarFallback>CN</AvatarFallback>
-            </Avatar>
-
-            <span>Avatar</span>
+            <img src={ImgLogo} className="h-12 object-fill" alt="Logo" />
+          </NavigationMenuLink>
+          <NavigationMenuLink
+            className={cn(navigationMenuTriggerStyle(), "bg-inherit text-white")}
+          >
+            Inicio
           </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>
